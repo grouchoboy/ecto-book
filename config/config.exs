@@ -8,7 +8,8 @@
 #---
 # This file is responsible for configuring your application
 # and its dependencies with the aid of the Mix.Config module.
-use Mix.Config
+# use Mix.Config
+import Config
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
@@ -36,6 +37,9 @@ config :music_db, MusicDB.Repo,
   # password: your_password,
   database: "music_db",
   hostname: "localhost",
+  username: "postgres",
+  password: "password",
+  port: 54321,
   migration_lock: nil # this is not normally needed - we put it here to support an example of
                       # creating an index with the `concurrently` option set to true
 
